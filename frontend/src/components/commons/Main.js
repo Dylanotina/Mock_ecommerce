@@ -16,11 +16,11 @@ function Main(props) {
                         <Home></Home>
                     </Route>
 
-                    <Route path="/products" >
+                    <Route path="/products">
                         <Products></Products>
                     </Route>
 
-                    <Route path="/product" >
+                    <Route path="/product">
                         <Product></Product>
                     </Route>
 
