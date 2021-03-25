@@ -9,7 +9,7 @@ const productSchema = new mongoose.Schema({
     sizeAvailability : [Number],
     desciption : String,
     reviews : [{type : Schema.Types.ObjectId, ref: 'Review'}],
-    image : String,  
+    image : Buffer,  
     category : {type : Schema.Types.ObjectId, ref: 'Category'}
 
 })
