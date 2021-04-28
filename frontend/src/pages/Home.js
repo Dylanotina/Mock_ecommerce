@@ -11,7 +11,7 @@ function Home() {
                     <img
                     className="d-block w-100"
                     src=""
-                    alt="First slide"
+                    alt="First Slide"
                     />
                     <Carousel.Caption>
                     <h3>First slide label</h3>
