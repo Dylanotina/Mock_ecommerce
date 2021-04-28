@@ -14,6 +14,13 @@ app.use(cors())
 app.use('/api', routes)
 connect();
 
+<<<<<<< Updated upstream
+=======
+//generatorProduct()
+
+
+
+>>>>>>> Stashed changes
 const PORT = process.env.PORT || 3000
 
 app.listen(PORT, ()=> console.log(`Server started on port ${PORT}`))
