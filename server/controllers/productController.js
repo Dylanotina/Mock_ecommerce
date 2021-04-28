@@ -11,11 +11,12 @@ const getProduct = async (id) => {
     return response
 }
 
-const addProduct = async({name, price, sizeAvailability, image}) => {
+const addProduct = async({name, price, sizeAvailability,description,image}) => {
     let doc = new productModel({
         name : name,
         price : price,
         sizeAvailability :sizeAvailability,
+        description : description,
         image : image
     })
 

@@ -4,6 +4,8 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import routes from './routes.js'
 import connect from './config/configdb.js'
+import generatorProduct from './config/generator.js'
+import path from 'path'
 
 
 const app = express();
@@ -14,13 +16,6 @@ app.use(cors())
 app.use('/api', routes)
 connect();
 
-<<<<<<< Updated upstream
-=======
-//generatorProduct()
-
-
-
->>>>>>> Stashed changes
 const PORT = process.env.PORT || 3000
 
 app.listen(PORT, ()=> console.log(`Server started on port ${PORT}`))
