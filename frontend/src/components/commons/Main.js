@@ -20,7 +20,7 @@ function Main(props) {
                         <Products></Products>
                     </Route>
 
-                    <Route path="/product">
+                    <Route path="/product/:id">
                         <Product></Product>
                     </Route>
 

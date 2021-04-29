@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import Product from '../components/commons/Product'
+import { Link } from 'react-router-dom'
 
 
 function Products() {
@@ -18,7 +19,7 @@ function Products() {
 
     return (
         <div style={{display: 'grid', gridTemplateColumns : '1fr 1fr 1fr'}}>
-            {state.map(product => (<Product {...product}/>))}
+            {state.map(product => (<Link to={`/product/${product._id}`}><Product {...product}/></Link>))}
         </div>
     )
 }
