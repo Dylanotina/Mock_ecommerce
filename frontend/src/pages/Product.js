@@ -28,8 +28,8 @@ function Product() {
       className="productInfo-container"
       style={{ display: "flex", flexDirection: "row", height: "100%" }}
     >
-      <div className='image-container' style={{ width: "50%", height: "100%", marginLeft: "0.75rem" }}>
-        <img src={`data:image/jpeg;base64,${productInfo.image}`} alt="Test"></img>
+      <div className='image-container' style={{ width: "100%", height: "100%", marginLeft: "0.75rem" }}>
+        <img src={`data:image/jpeg;base64,${productInfo.image}`} alt="Test" style={{width: '80%'}}></img>
       </div>
       <div className='text-container' style={{ width: "50%", height: "100%", marginRight: "0.75rem" }}>
         <h3>{productInfo.name}</h3>
