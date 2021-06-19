@@ -1,5 +1,7 @@
 import React from 'react'
 import {BrowserRouter as Router , Switch, Route } from  'react-router-dom'
+
+// Pages
 import Checkout from '../../pages/Checkout'
 import Home from '../../pages/Home'
 import Login from '../../pages/Login'
@@ -7,9 +9,18 @@ import Product from '../../pages/Product'
 import Products from '../../pages/Products'
 import Register from '../../pages/Register'
 
-function Main(props) {
+// Components 
+import Cart from '../cart/Cart'
+
+function Main({cartItems, handleAddToCart, handleRemoveToCart, className}) {
+
+
+
     return (
-        <div className={props.className}>
+        <div className={className}>
+            <div className="offcanvas offcanvas-end" tabIndex='-1' id='offcanvascart'>
+                <Cart addToCart={handleAddToCart} removeFromCart={handleRemoveToCart} cartItems={cartItems} />
+            </div>
             <Router>
                 <Switch>
                     <Route path="/" exact>
@@ -21,7 +32,7 @@ function Main(props) {
                     </Route>
 
                     <Route path="/product/:id">
-                        <Product></Product>
+                        <Product addToCart={handleAddToCart}></Product>
                     </Route>
 
                     <Route path="/login">
@@ -37,6 +48,7 @@ function Main(props) {
                     </Route>
                 </Switch>
             </Router>
+            
         </div>
     )
 }

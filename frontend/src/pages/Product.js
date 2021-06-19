@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-function Product() {
+function Product({addToCart}) {
   const [productInfo, setproductInfo] = useState({});
   const { id } = useParams();
   
@@ -23,6 +23,8 @@ function Product() {
     };
     fetchProduct();
   }, [id]);
+
+
   return (
     <div
       className="productInfo-container"
@@ -39,7 +41,7 @@ function Product() {
         <div className="sizes" style={{ display : 'grid', gridTemplateColumns : '1fr 1fr 1fr', gap:'7px'}}>
             {sizes.map( size => (<button disabled={checkAvailabilty(size)}>US {size}</button>))}
             </div>
-        <div className='addToCart' style={{display : 'flex', justifyContent: 'center', alignContent: 'center', alignItems: 'center',marginTop: '10rem', marginLeft :'3rem', width : '80%', border : '1px solid black', borderRadius : '10px'}}>
+        <div className='addToCart' onClick={() => addToCart({...productInfo, amount : 1})} style={{display : 'flex', justifyContent: 'center', alignContent: 'center', alignItems: 'center',marginTop: '10rem', marginLeft :'3rem', width : '80%', border : '1px solid black', borderRadius : '10px'}}>
             Add to cart
         </div>
       </div>
