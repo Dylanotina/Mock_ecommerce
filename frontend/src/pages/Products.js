@@ -17,18 +17,18 @@ function Products() {
   }, []);
 
   return (
-      <div>
+      <div style={{height:'100%',overflowY:'scroll'}}>
       {state.length === 0 ? (
-        <div class="d-flex justify-content-center">
-          <div class="spinner-border" role="status">
-            <span class="visually-hidden">Loading...</span>
+        <div className="d-flex justify-content-center">
+          <div className="spinner-border" role="status">
+            <span className="visually-hidden">Loading...</span>
           </div>
         </div>
       ) : null}
     <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}>
       {state.map((product) => (
         <Link to={`/product/${product._id}`}>
-          <Product {...product} />
+          <Product {...product} key={product._id} />
         </Link>
       ))}
     </div>
