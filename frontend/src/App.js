@@ -12,8 +12,11 @@ function App() {
       if(clickedItem !== undefined){
           setCartItems(prev => {
               let isItemInCart = prev.find(item => clickedItem.id === item.id)
+
               if(isItemInCart){
-                  prev.map(item => [...prev, {...item, amount : item.amount + 1 }])
+                console.log('ca marche')
+                  return prev.map(item => item.id === isItemInCart.id ? {...item, amount : item.amount+1} : item ) 
+                  
               }
               return [...prev, clickedItem]
           })
