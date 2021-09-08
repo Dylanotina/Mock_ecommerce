@@ -11,7 +11,7 @@ function Header(props) {
                     <Nav.Link  href="/login">Login</Nav.Link>
                     <Nav.Link href="">Categories</Nav.Link>
                     <Nav.Link href="/products">All products</Nav.Link>
-                    <Nav.Link href="#offcanvascart" data-bs-toggle='offcanvas'><CartIcon/></Nav.Link>
+                    <Nav.Link href="#offcanvascart" data-bs-toggle='offcanvas'><CartIcon cartsize={props.cartsize}/></Nav.Link>
                 </Nav>
             </Navbar>
         </div>
