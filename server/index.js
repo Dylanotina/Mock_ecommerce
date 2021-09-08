@@ -16,6 +16,10 @@ app.use(cors())
 app.use('/api', routes)
 connect();
 
-const PORT = process.env.PORT || 3000
+//generatorProduct()
+
+
+
+const PORT = process.env.PORT || 3001
 
 app.listen(PORT, ()=> console.log(`Server started on port ${PORT}`))

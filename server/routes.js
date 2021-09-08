@@ -10,10 +10,13 @@ router.get('/products' , async(req, res) => {
     res.json({success : true, data : dbresponse })
 })
 
-router.get('/product', async(req,res)=> {
-    let {id} = req.body
+router.get('/product/:id', async(req,res)=> {
+    let {id} = req.params
     let dbresponse =  await productController.getProduct(id)
-    res.json({success : true, data : dbresponse })
+    let imagebuffer = Buffer.from(dbresponse.image)
+    let imagedata = imagebuffer.toString('base64')
+    let cloneObj = {...dbresponse, imagedata }
+    res.json({success : true, data : cloneObj })
 })
 
 router.post('/product', (req,res)=> {
