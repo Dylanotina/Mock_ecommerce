@@ -28,7 +28,7 @@ function Products() {
     <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}>
       {state.map((product) => (
         <Link to={`/product/${product._id}`}>
-          <Product {...product} key={product._id} />
+          <Product {...product} key={product._id} className={'products'} />
         </Link>
       ))}
     </div>

@@ -1,0 +1,31 @@
+.recently-added {
+    width : calc(100% / 3);
+     height : 10rem; 
+     margin-bottom : 3rem; 
+     margin-left : 1rem; 
+     border: none;
+}
+
+.recently-added img {
+    width: 10rem; 
+    height: 10rem; 
+    object-fit:contain
+}
+
+.products{
+    width : auto;
+     height : auto; 
+     margin-bottom : 1rem; 
+     margin-left : 1rem; 
+     border: none 
+}
+
+.products img{
+    width: 20rem; 
+    height: 20rem; 
+    object-fit:contain
+}
+
+.recently-added .card-body { 
+    padding-top: 0px;
+}

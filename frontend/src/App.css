@@ -1,15 +1,16 @@
 .App{
   height: 100vh;
+
 }
 
 .main{
-  height: 85%;
+  height: 85vh;
 }
 
 .header{
-  height: 7.5%;
+  height: 7.5vh;
 }
 
 .footer{
-  height:7.5%;
+  height:7.5vh;
 }

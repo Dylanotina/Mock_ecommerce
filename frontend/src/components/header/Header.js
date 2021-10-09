@@ -6,7 +6,7 @@ function Header(props) {
     return (
         <div className={props.className}>
             <Navbar bg="dark" variant="dark" style={{height: '100%'}}>
-                <Navbar.Brand>MockNike</Navbar.Brand>
+                <Nav.Link href="/"><Navbar.Brand>MockNike</Navbar.Brand></Nav.Link>
                 <Nav className="mr-auto">
                     <Nav.Link  href="/login">Login</Nav.Link>
                     <Nav.Link href="">Categories</Nav.Link>
